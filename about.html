@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biz haqimizda | NextStep</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .delay-100 {
+      animation-delay: 0.1s;
+      opacity: 0;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+      opacity: 0;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="./index.html" class="flex items-center gap-3 transition-transform hover:scale-105 duration-300">
+          <div
+            class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200">
+            N
+          </div>
+          <span class="text-2xl font-bold text-gray-900 tracking-tight">Next<span
+              class="text-blue-600">Step</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="./index.html"
+            class="text-base font-medium text-gray-600 hover:text-blue-600 transition-colors">Kurslar</a>
+          <a href="./about.html" class="text-base font-medium text-blue-600 transition-colors">Biz haqimizda</a>
+          <a href="./boglanish.html"
+            class="text-base font-medium text-gray-600 hover:text-blue-600 transition-colors">Bog'lanish</a>
+        </nav>
+
+        <div id="auth-buttons" class="hidden md:flex items-center gap-4">
+          <a href="./login.html"
+            class="text-sm font-semibold px-5 py-2.5 border-2 rounded-xl border-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white transition-all">Kirish</a>
+        </div>
+
+        <div id="nav-profile-link" class="hidden md:flex items-center gap-4">
+          <a href="./profil.html"
+            class="flex items-center gap-2 text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-xl border border-blue-200 hover:bg-blue-100 transition-all">
+            <i class="fa-solid fa-circle-user text-xl"></i>
+            <span id="nav-user-name">Profil</span>
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" type="button" aria-label="Menu"
+          class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto animate-fade-up">
+          <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm">Bizning missiyamiz</span>
+          <h1 class="mt-4 text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Ta'lim orqali insonlar hayotini <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">yaxshilash</span>
+          </h1>
+          <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+            NextStep platformasi yordamida biz har bir inson uchun sifatli, zamonaviy va qulay til o'rganish
+            imkoniyatini yaratishni o'z oldimizga maqsad qilib qo'yganmiz.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistikalar -->
+    <section class="py-16 bg-blue-600 animate-fade-up delay-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-x divide-blue-500/30">
+          <div class="p-4">
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">5</div>
+            <div class="text-blue-100 font-medium">Xorijiy tillar</div>
+          </div>
+          <div class="p-4">
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
+            <div class="text-blue-100 font-medium">Video darsliklar</div>
+          </div>
+          <div class="p-4">
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">98%</div>
+            <div class="text-blue-100 font-medium">Ijobiy natijalar</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-12">
+          <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm">Savol va javoblar</span>
+          <h2 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">Ko'p beriladigan savollar</h2>
+          <p class="mt-4 text-gray-600">Platformamiz haqida eng ko'p beriladigan savollarga shu yerdan javob topishingiz
+            mumkin.</p>
+        </div>
+
+        <div class="space-y-4">
+
+          <!-- Savol 1 -->
+          <details
+            class="group bg-white rounded-2xl border border-gray-200 p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 hover:border-blue-300">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg text-gray-900">
+              <span>Kurslarni o'rganish bepulmi?</span>
+              <span
+                class="ml-4 shrink-0 rounded-full bg-blue-50 p-2 text-blue-600 group-open:-rotate-180 transition-transform duration-300">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-gray-600 leading-relaxed text-sm">
+              NextStep platformasidagi barcha asosiy darslar va o'quv materiallari mutlaqo bepul. Siz istalgan vaqtda
+              ro'yxatdan o'tib, darslarni tomosha qilishingiz mumkin.
+            </p>
+          </details>
+
+          <!-- Savol 2 -->
+          <details
+            class="group bg-white rounded-2xl border border-gray-200 p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 hover:border-blue-300">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg text-gray-900">
+              <span>Kursni tugatgach sertifikat beriladimi?</span>
+              <span
+                class="ml-4 shrink-0 rounded-full bg-blue-50 p-2 text-blue-600 group-open:-rotate-180 transition-transform duration-300">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-gray-600 leading-relaxed text-sm">
+              Ha, har bir til kursini to'liq yakunlab, yakuniy test va topshiriqlarni muvaffaqiyatli topshirganingizdan
+              so'ng profilingizda raqamli sertifikat shakllanadi.
+            </p>
+          </details>
+
+          <!-- Savol 3 -->
+          <details
+            class="group bg-white rounded-2xl border border-gray-200 p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 hover:border-blue-300">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg text-gray-900">
+              <span>Noldan boshlab o'rgansam bo'ladimi?</span>
+              <span
+                class="ml-4 shrink-0 rounded-full bg-blue-50 p-2 text-blue-600 group-open:-rotate-180 transition-transform duration-300">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-gray-600 leading-relaxed text-sm">
+              Albatta! Darslarimiz eng alifbo va boshlang'ich iboralardan tortib, murakkab grammatika va so'zlashuv
+              darajasigacha bosqichma-bosqich tuzilgan.
+            </p>
+          </details>
+
+          <!-- Savol 4 -->
+          <details
+            class="group bg-white rounded-2xl border border-gray-200 p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 hover:border-blue-300">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-lg text-gray-900">
+              <span>O'zlashtirish darajamni qanday kuzatishim mumkin?</span>
+              <span
+                class="ml-4 shrink-0 rounded-full bg-blue-50 p-2 text-blue-600 group-open:-rotate-180 transition-transform duration-300">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-gray-600 leading-relaxed text-sm">
+              Saytda ro'yxatdan o'tib **Profil** bo'limiga kirsangiz, har bir til bo'yicha qancha dars o'tganingiz va
+              o'zlashtirish foizingiz avtomatik ravishda ko'rinib turadi[cite: 11].
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Bo'limi -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-4 border-blue-600 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+
+        <!-- 1. Brend va Tavsif -->
+        <div class="space-y-4">
+          <a href="./index.html" class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-900/50">
+              N
+            </div>
+            <span class="text-2xl font-bold text-white tracking-tight">Next<span
+                class="text-blue-500">Step</span></span>
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Sifatli, zamonaviy va qulay formatda xorijiy tillarni noldan o'rganishingiz uchun yaratilgan interaktiv
+            ta'lim platformasi.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-gray-800 hover:bg-blue-600 text-gray-400 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands font-semibold fa-telegram"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-gray-800 hover:bg-blue-600 text-gray-400 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands font-semibold fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-lg bg-gray-800 hover:bg-blue-600 text-gray-400 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands font-semibold fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Tezkor Linklar -->
+        <div>
+          <h3 class="text-white font-semibold text-base mb-4">Navigatsiya</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="./index.html" class="hover:text-blue-400 transition-colors">Asosiy sahifa</a></li>
+            <li><a href="./index.html#kurslar" class="hover:text-blue-400 transition-colors">Kurslar ro'yxati</a></li>
+            <li><a href="./about.html" class="text-blue-500 font-medium">Biz haqimizda</a></li>
+            <li><a href="./boglanish.html" class="hover:text-blue-400 transition-colors">Bog'lanish</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Mashhur Kurslar -->
+        <div>
+          <h3 class="text-white font-semibold text-base mb-4">Mavjud Tillari</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="./kurslar/ingliz_tili.html" class="hover:text-blue-400 transition-colors">Ingliz tili</a></li>
+            <li><a href="./kurslar/koreys_tili.html" class="hover:text-blue-400 transition-colors">Koreys tili</a></li>
+            <li><a href="./kurslar/rus_tili.html" class="hover:text-blue-400 transition-colors">Rus tili</a></li>
+            <li><a href="./kurslar/nemis_tili.html" class="hover:text-blue-400 transition-colors">Nemis tili</a></li>
+            <li><a href="./kurslar/turk_tili.html" class="hover:text-blue-400 transition-colors">Turk tili</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. Aloqa Ma'lumotlari -->
+        <div>
+          <h3 class="text-white font-semibold text-base mb-4">Bog'lanish</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3 text-gray-400">
+              <i class="fa-solid fa-location-dot text-blue-500 mt-1"></i>
+              <span>Toshkent shahri, O'zbekiston</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-400">
+              <i class="fa-solid fa-envelope text-blue-500"></i>
+              <span>info@nextstep.uz</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-400">
+              <i class="fa-solid fa-phone text-blue-500"></i>
+              <span>+998 (90) 123-45-67</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Mualliflik Huquqi -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>© 2026 NextStep. Barcha huquqlar himoyalangan.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-gray-400 transition-colors">Maxfiylik siyosati</a>
+          <a href="#" class="hover:text-gray-400 transition-colors">Foydalanish shartlari</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

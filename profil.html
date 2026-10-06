@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextStep | Profil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-between">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="./index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">N</div>
+          <span class="text-2xl font-bold text-gray-900">Next<span class="text-blue-600">Step</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="./index.html" class="text-base font-medium text-gray-600 hover:text-blue-600">Kurslar</a>
+          <a href="./about.html" class="text-base font-medium text-gray-600 hover:text-blue-600">Biz haqimizda</a>
+          <a href="./boglanish.html" class="text-base font-medium text-gray-600 hover:text-blue-600">Bog'lanish</a>
+        </nav>
+
+        <div id="nav-profile-link" class="hidden md:flex items-center gap-4">
+          <a href="./profil.html" class="flex items-center gap-2 text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-xl border border-blue-200">
+            <i class="fa-solid fa-circle-user text-xl"></i>
+            <span id="nav-user-name">Profil</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Profile Header -->
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 mb-8">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="w-28 h-28 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 p-1 shrink-0">
+          <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-user-astronaut text-5xl text-blue-600"></i>
+          </div>
+        </div>
+
+        <div class="flex-grow text-center md:text-left space-y-2">
+          <h1 id="profile-name" class="text-2xl sm:text-3xl font-bold text-gray-900">Yuklanmoqda...</h1>
+          <p class="text-gray-500 text-sm flex items-center justify-center md:justify-start gap-2">
+            <i class="fa-regular fa-envelope"></i> <span id="profile-email">---</span>
+          </p>
+          <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
+            <span class="px-3 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-lg text-xs font-semibold">
+              🔥 <span id="profile-streak">7</span> kunlik streak
+            </span>
+            <span class="px-3 py-1 bg-cyan-50 text-cyan-700 border border-cyan-200 rounded-lg text-xs font-semibold">
+              🎓 Maqsad: <span id="profile-goal">KAIST universitetiga kirish</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Courses Progress -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2 space-y-4">
+        <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+          <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-play text-blue-600"></i> Barcha 5 ta Til Bo'yicha Progress
+          </h2>
+
+          <div class="space-y-4">
+            
+            <!-- 1. Ingliz tili -->
+            <div class="p-4 rounded-2xl border bg-gray-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-4 w-full sm:w-auto">
+                <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold shrink-0">ENG</div>
+                <div class="flex-grow">
+                  <h3 class="font-bold text-gray-900">Ingliz Tili</h3>
+                  <p id="eng-progress-text" class="text-xs text-gray-500">180 ta darsdan 0 tasi ko'rildi</p>
+                  <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
+                    <div id="eng-progress-bar" class="bg-blue-600 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="./kurslar/ingiliz_tili.html" class="px-4 py-2 bg-blue-600 text-white text-xs font-semibold rounded-xl shrink-0">O'tish</a>
+            </div>
+
+            <!-- 2. Koreys tili -->
+            <div class="p-4 rounded-2xl border bg-gray-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-4 w-full sm:w-auto">
+                <div class="w-12 h-12 rounded-xl bg-red-500 text-white flex items-center justify-center font-bold shrink-0">KOR</div>
+                <div class="flex-grow">
+                  <h3 class="font-bold text-gray-900">Koreys Tili</h3>
+                  <p id="kor-progress-text" class="text-xs text-gray-500">126 ta darsdan 0 tasi ko'rildi</p>
+                  <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
+                    <div id="kor-progress-bar" class="bg-red-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="./kurslar/korean.html" class="px-4 py-2 bg-blue-600 text-white text-xs font-semibold rounded-xl shrink-0">O'tish</a>
+            </div>
+
+            <!-- 3. Rus tili -->
+            <div class="p-4 rounded-2xl border bg-gray-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-4 w-full sm:w-auto">
+                <div class="w-12 h-12 rounded-xl bg-cyan-600 text-white flex items-center justify-center font-bold shrink-0">RUS</div>
+                <div class="flex-grow">
+                  <h3 class="font-bold text-gray-900">Rus Tili</h3>
+                  <p id="rus-progress-text" class="text-xs text-gray-500">100 ta darsdan 0 tasi ko'rildi</p>
+                  <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
+                    <div id="rus-progress-bar" class="bg-cyan-600 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="./kurslar/rus_tili.html" class="px-4 py-2 bg-blue-600 text-white text-xs font-semibold rounded-xl shrink-0">O'tish</a>
+            </div>
+
+            <!-- 4. Turk tili -->
+            <div class="p-4 rounded-2xl border bg-gray-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-4 w-full sm:w-auto">
+                <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shrink-0">TUR</div>
+                <div class="flex-grow">
+                  <h3 class="font-bold text-gray-900">Turk Tili</h3>
+                  <p id="tur-progress-text" class="text-xs text-gray-500">100 ta darsdan 0 tasi ko'rildi</p>
+                  <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
+                    <div id="tur-progress-bar" class="bg-emerald-600 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="./kurslar/turk_tili.html" class="px-4 py-2 bg-blue-600 text-white text-xs font-semibold rounded-xl shrink-0">O'tish</a>
+            </div>
+
+            <!-- 5. Nemis tili -->
+            <div class="p-4 rounded-2xl border bg-gray-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-4 w-full sm:w-auto">
+                <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center font-bold shrink-0">DEU</div>
+                <div class="flex-grow">
+                  <h3 class="font-bold text-gray-900">Nemis Tili</h3>
+                  <p id="deu-progress-text" class="text-xs text-gray-500">100 ta darsdan 0 tasi ko'rildi</p>
+                  <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
+                    <div id="deu-progress-bar" class="bg-amber-600 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="./kurslar/nemis_tili.html" class="px-4 py-2 bg-blue-600 text-white text-xs font-semibold rounded-xl shrink-0">O'tish</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+          <h2 class="text-xl font-bold text-gray-900 mb-4">Sozlamalar</h2>
+          <button onclick="logoutUser()" class="w-full py-3 bg-red-50 hover:bg-red-100 text-red-600 font-semibold text-sm rounded-xl transition-all">
+            <i class="fa-solid fa-right-from-bracket"></i> Tizimdan Chiqish
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = getUserData();
+
+      document.getElementById('profile-name').textContent = user.name;
+      document.getElementById('profile-email').textContent = user.email;
+      document.getElementById('profile-goal').textContent = user.goal;
+
+      const watched = user.watchedLessons || {};
+
+      function setProgress(count, total, textId, barId) {
+        const textEl = document.getElementById(textId);
+        const barEl = document.getElementById(barId);
+        const percent = Math.min(100, Math.round((count / total) * 100));
+        textEl.textContent = `${total} ta darsdan ${count} tasi ko'rildi (${percent}%)`;
+        barEl.style.width = percent + "%";
+      }
+
+      setProgress((watched.english || []).length, COURSE_TOTALS.english, 'eng-progress-text', 'eng-progress-bar');
+      setProgress((watched.korean || []).length, COURSE_TOTALS.korean, 'kor-progress-text', 'kor-progress-bar');
+      setProgress((watched.russian || []).length, COURSE_TOTALS.russian, 'rus-progress-text', 'rus-progress-bar');
+      setProgress((watched.turkish || []).length, COURSE_TOTALS.turkish, 'tur-progress-text', 'tur-progress-bar');
+      setProgress((watched.german || []).length, COURSE_TOTALS.german, 'deu-progress-text', 'deu-progress-bar');
+    });
+  </script>
+</body>
+</html>

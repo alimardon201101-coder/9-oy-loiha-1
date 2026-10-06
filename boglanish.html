@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bog'lanish | NextStep</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-between">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="./index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">N</div>
+          <span class="text-2xl font-bold text-gray-900">Next<span class="text-blue-600">Step</span></span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="./index.html" class="text-base font-medium text-gray-600 hover:text-blue-600">Kurslar</a>
+          <a href="./about.html" class="text-base font-medium text-gray-600 hover:text-blue-600">Biz haqimizda</a>
+          <a href="./boglanish.html" class="text-base font-medium text-blue-600">Bog'lanish</a>
+        </nav>
+
+        <div id="nav-profile-link" class="hidden md:flex items-center gap-4">
+          <a href="./profil.html" class="flex items-center gap-2 text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-xl border border-blue-200">
+            <i class="fa-solid fa-circle-user text-xl"></i>
+            <span id="nav-user-name">Profil</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+      <h2 class="text-2xl font-bold text-gray-900 mb-2">Xabar Yo'llash</h2>
+      <p class="text-gray-500 text-sm mb-6">Formani to'ldiring va operatorlarimiz siz bilan tezda bog'lanishadi.</p>
+
+      <form id="contact-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Ismingiz</label>
+          <input type="text" id="contact-name" required class="w-full p-3 bg-gray-50 border rounded-xl text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Email</label>
+          <input type="email" id="contact-email" required class="w-full p-3 bg-gray-50 border rounded-xl text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Xabar</label>
+          <textarea id="contact-message" rows="4" required class="w-full p-3 bg-gray-50 border rounded-xl text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 bg-blue-600 text-white font-bold rounded-xl shadow-md">Xabarni Yuborish</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="./js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = getUserData();
+      if (user && user.isLoggedIn) {
+        if (user.name) document.getElementById('contact-name').value = user.name;
+        if (user.email) document.getElementById('contact-email').value = user.email;
+      }
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert("Xabaringiz muvaffaqiyatli yuborildi!");
+      document.getElementById('contact-message').value = '';
+    });
+  </script>
+  
+</body>
+</html>

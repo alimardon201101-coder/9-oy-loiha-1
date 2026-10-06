@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextStep - Ro'yxatdan o'tish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between text-slate-800">
+
+    <header class="w-full bg-white border-b border-slate-200 py-4 px-6 md:px-12 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 font-extrabold text-2xl text-sky-500">
+            <i class="fa-solid fa-chart-line text-sky-500"></i> NextStep
+        </a>
+        <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-sky-500">
+            <i class="fa-solid fa-arrow-left mr-1"></i> Bosh sahifaga qaytish
+        </a>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-6 my-6">
+        <div class="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-14 h-14 bg-sky-100 text-sky-500 rounded-2xl mb-3">
+                    <i class="fa-solid fa-user-plus text-2xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-slate-900">Hisob yaratish</h1>
+                <p class="text-slate-500 text-sm mt-1">Darslarni o'rganishni hoziroq boshlang</p>
+            </div>
+
+            <form class="space-y-4">
+                <div>
+                    <label for="fullname" class="block text-xs font-semibold uppercase text-slate-600 mb-1">To'liq ismingiz</label>
+                    <input type="text" id="fullname" required placeholder="Masalan: Ali Valiyev" class="w-full px-4 py-2.5 bg-slate-50 border rounded-xl text-sm focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-xs font-semibold uppercase text-slate-600 mb-1">Email</label>
+                    <input type="email" id="email" required placeholder="example@mail.com" class="w-full px-4 py-2.5 bg-slate-50 border rounded-xl text-sm focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div>
+                    <label for="language" class="block text-xs font-semibold uppercase text-slate-600 mb-1">O'rganmoqchi bo'lgan tilingiz</label>
+                    <select id="language" class="w-full px-4 py-2.5 bg-slate-50 border rounded-xl text-sm text-slate-700">
+                        <option value="en">Ingliz tili</option>
+                        <option value="kr">Koreys tili</option>
+                        <option value="ru">Rus tili</option>
+                        <option value="tr">Turk tili</option>
+                        <option value="de">Nemis tili</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full py-3 px-4 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-xl shadow-md transition-all text-sm mt-2">
+                    Ro'yxatdan o'tish
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="./js/app.js"></script>
+    <script>
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const lang = document.getElementById('language').value;
+            loginUser(name, email, lang);
+        });
+    </script>
+</body>
+</html>
